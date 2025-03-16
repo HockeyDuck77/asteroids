@@ -1,8 +1,4 @@
-# this allows us to use code from
-# the open-source pygame library
-# throughout this file
 import pygame
-
 from constants import *
 from player import *
 
@@ -25,6 +21,8 @@ def main():
         player.draw(screen)
 
         dt = clock.tick(60)/1000
+        player.update(dt)
+        
         pygame.display.flip()
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
